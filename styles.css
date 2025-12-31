@@ -69,15 +69,22 @@ footer {
 }
 
 .paper-img {
-    width:100%;
-    margin:25px 0;
-    border-radius:12px;
+    width:180px;
+    float:right;
+    margin:10px 0 15px 20px;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    transform:rotate(1.5deg);
 }
 
+.paper-img:nth-of-type(2){ transform:rotate(-2deg); }
+.paper-img:nth-of-type(3){ transform:rotate(1deg); }
+
 .letter {
+    font-family:'Patrick Hand', cursive;
     white-space:pre-wrap;
-    line-height:1.7;
-    font-size:1.05rem;
+    line-height:1.8;
+    font-size:1.1rem;
 }
 
 .timeline {
@@ -162,4 +169,10 @@ footer {
     .timeline::before{left:20px;}
     .timeline-item{flex-direction:column;padding-left:40px;}
     .timeline-date{text-align:left;margin-bottom:6px;}
+    .paper-img{
+        float:none;
+        display:block;
+        margin:20px auto;
+        transform:none;
+    }
 }
