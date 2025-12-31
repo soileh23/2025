@@ -58,14 +58,44 @@ footer {
 }
 
 .paper {
-    max-width:800px;
-    margin:50px auto;
-    padding:40px;
-    background:var(--paper);
-    border-radius:16px;
-    box-shadow:0 30px 60px rgba(0,0,0,.1);
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' fill='rgba(0,0,0,0.02)'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/svg%3E");
-    animation:float 6s ease-in-out infinite;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 60px 50px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffafc 0px,
+      #fffafc 30px,
+      #ece6f2 31px
+    );
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 2px;
+  height: 100%;
+  background: rgba(180,160,210,0.3);
+}
+
+.paper-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #efe7ff, #f7ecff);
+  padding: 40px 10px;
+}
+
+.letter {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.15rem;
+  line-height: 30px; /* match the line spacing */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .paper-img {
